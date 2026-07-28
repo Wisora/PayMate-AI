@@ -1,0 +1,51 @@
+# PayMate AI – CODEOWNERS
+
+Defines default reviewers for specific files and directories.
+Ensures governance, compliance, audit, and finance leads approve changes.
+
+Default owners for all files
+
+-       @GovernanceLead @ComplianceOfficer @InvestorRelationsLead @FinanceLead
+
+Governance Suite
+
+/docs/investor-presentations/binder-governance-\* @GovernanceLead @ComplianceOfficer
+
+Audit Evidence Suite
+
+/docs/investor-presentations/binder-audit-\* @InvestorRelationsLead @ComplianceOfficer
+
+Compliance & Risk Suite
+
+/docs/investor-presentations/binder-compliance-_@ComplianceOfficer
+/docs/investor-presentations/binder-risk-_ @GovernanceLead @InvestorRelationsLead
+/docs/investor-presentations/binder-mitigation-_@GovernanceLead @FinanceLead
+/docs/investor-presentations/binder-continuous-_ @GovernanceLead @ComplianceOfficer
+/docs/investor-presentations/binder-lessons-_@GovernanceLead
+/docs/investor-presentations/binder-evolution-_ @GovernanceLead @InvestorRelationsLead
+/docs/investor-presentations/binder-annual-\* @FinanceLead @GovernanceLead
+
+Repo Index & Style Guide
+
+/docs/investor-presentations/binder-master-index-map.md @GovernanceLead
+/docs/investor-presentations/binder-governance-board-deck-style-guide.md @GovernanceLead @ComplianceOfficer
+README.md @GovernanceLead
+CONTRIBUTING.md @GovernanceLead
+
+Default owner for everything in the repo
+@your-github-handle
+
+Evidence and dashboards
+/evidence/ @your-github-handle
+/dashboards/ @your-github-handle
+/reports/ @your-github-handle
+
+Scripts
+/scripts/ @your-github-handle
+
+Documentation
+README.md @your-github-handle
+README-contributor.md @your-github-handle
+README-contributor-guide.md @your-github-handle
+CONTRIBUTING.md @your-github-handle
+SECURITY.md @your-github-handle

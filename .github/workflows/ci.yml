@@ -1,0 +1,58 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # --- Checkout Repo ---
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # --- Setup Node (for linting, markdown checks) ---
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+
+      # --- Install Dependencies ---
+      - name: Install dependencies
+        run: npm install
+
+      # --- Lint Code ---
+      - name: Run ESLint
+        run: npm run lint
+
+      # --- Test Suite ---
+      - name: Run tests
+        run: npm test
+
+      # --- Markdown Lint ---
+      - name: Lint Markdown docs
+        # Use the markdownlint CLI via npx to avoid invalid action inputs
+        run: npx markdownlint-cli "docs/**/*.md" --config .markdownlint.json
+
+      # --- Accessibility Check (Docs) ---
+      - name: Accessibility check
+        run: npx pa11y docs/investor-presentations/README.md
+
+      # --- Commit Message Check ---
+      - name: Validate commit messages
+        uses: wagoid/commitlint-github-action@v5
+        with:
+          configFile: commitlint.config.js
+
+      # --- Governance Binder Integrity ---
+      - name: Verify governance binder structure
+        run: |
+          if [ ! -f docs/investor-presentations/binder-master-index-map.md ]; then
+            echo "❌ Governance Master Index missing"
+            exit 1
+          fi
+          echo "✅ Governance binder structure verified"

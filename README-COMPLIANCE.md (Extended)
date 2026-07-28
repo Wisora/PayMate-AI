@@ -1,0 +1,62 @@
+# Compliance Governance Overview – PayMate AI
+
+Purpose
+Provide contributors, governance leads, board members, and investors with a clear overview of compliance governance.  
+This README highlights registers, calendars, and evidence, integrating audit, security, and financial domains for holistic compliance assurance.
+
+Compliance Suite
+
+Core Files
+
+- **[COMPLIANCE-REGISTER.md](COMPLIANCE-REGISTER.md)** → Evidence log of compliance reviews, certifications, and governance actions.  
+- **[COMPLIANCE-CALENDAR.md](COMPLIANCE-CALENDAR.md)** → Cadence of compliance reviews, audits, and disclosures.  
+
+Linked Governance
+
+- **[AUDIT-REGISTER.md](AUDIT-REGISTER.md)** → Audit findings integrated into compliance governance.  
+- **[SECURITY-REGISTER.md](SECURITY-REGISTER.md)** → Security evidence tied to compliance outcomes.  
+- **[FINANCIAL-REGISTER.md](FINANCIAL-REGISTER.md)** → Financial compliance evidence linked to disclosures.  
+- **[QUALITY-REGISTER.md](QUALITY-REGISTER.md)** → Quality compliance evidence integrated into governance cycles.  
+- **[GOVERNANCE-BINDER.md](GOVERNANCE-BINDER.md)** → Consolidated compliance evidence for board review.  
+
+Compliance Governance Principles
+
+1. **Standards**  
+   - Compliance requirements defined in COMPLIANCE-REGISTER.md.  
+   - Linked to audit, security, and financial domains for traceability.  
+
+2. **Evidence Logging**  
+   - Compliance reviews and certifications logged in register.  
+   - Integrated into governance binder for board confidence.  
+
+3. **Cadence**  
+   - Quarterly compliance reviews tracked in COMPLIANCE-CALENDAR.md.  
+   - Annual consolidated compliance governance presented in board deck.  
+
+4. **Transparency**  
+   - Compliance evidence consolidated annually.  
+   - Investor disclosures aligned with compliance cadence.  
+
+Workflow Integration
+
+- Compliance standards → logged in register.  
+- Reviews and certifications → tracked in calendar.  
+- Linked evidence → audit, security, and financial domains.  
+- Consolidated evidence → governance binder and board deck.  
+
+Usage
+
+- **Contributors** → Follow compliance standards and participate in reviews.  
+- **Governance Leads** → Ensure compliance evidence logged and escalated.  
+- **Board Members** → Review compliance suite for confidence in governance maturity.  
+- **Investors** → Assess compliance transparency and cadence.  
+
+Review Cadence
+
+- **Quarterly** → Compliance calendar updated with reviews and evidence.  
+- **Annual** → Consolidated compliance governance presented in board deck.  
+
+License
+
+© 2026 PayMate AI. All rights reserved.  
+Compliance governance overview is for contributor, governance, board, and investor use only.

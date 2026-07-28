@@ -1,0 +1,35 @@
+# --- Core Settings ---
+* text=auto eol=lf
+* charset=utf-8
+
+# --- Markdown & Documentation ---
+*.md text diff=markdown
+*.md linguist-language=Markdown
+*.md whitespace=blank-at-eol
+
+# --- Code Files ---
+*.js text diff=javascript
+*.ts text diff=typescript
+*.py text diff=python
+*.json text
+*.yml text
+*.yaml text
+*.css text
+*.html text
+
+# --- Images & Visuals ---
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.svg text
+
+# --- Repo Governance ---
+docs/investor-presentations/**/*.md text diff=markdown
+README.md text diff=markdown
+CONTRIBUTING.md text diff=markdown
+CODEOWNERS text
+
+# --- Accessibility ---
+# Ensure consistent handling of alt text in diagrams
+*.md linguist-documentation=true

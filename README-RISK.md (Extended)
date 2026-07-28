@@ -1,0 +1,62 @@
+# Risk Governance Overview – PayMate AI
+
+Purpose
+Provide contributors, governance leads, board members, and investors with a clear overview of risk governance.  
+This README highlights registers, calendars, and evidence, integrating change, audit, and lessons domains for holistic assurance.
+
+Risk Suite
+
+Core Files
+
+- **[RISK-REGISTER.md](RISK-REGISTER.md)** → Evidence log of risks, mitigations, and governance actions.  
+- **[RISK-CALENDAR.md](RISK-CALENDAR.md)** → Cadence of risk reviews, updates, and disclosures.  
+
+Linked Governance
+
+- **[CHANGE-REGISTER.md](CHANGE-REGISTER.md)** → Risks linked to change management outcomes.  
+- **[AUDIT-REGISTER.md](AUDIT-REGISTER.md)** → Audit findings integrated into risk governance.  
+- **[LESSONS-REGISTER.md](LESSONS-REGISTER.md)** → Lessons learned feeding risk mitigation strategies.  
+- **[MITIGATION-REGISTER.md](MITIGATION-REGISTER.md)** → Mitigation actions tied to risk evidence.  
+- **[GOVERNANCE-BINDER.md](GOVERNANCE-BINDER.md)** → Consolidated risk evidence for board review.  
+
+Risk Governance Principles
+
+1. **Identification**  
+   - Risks logged in RISK-REGISTER.md.  
+   - Linked to change, audit, and lessons domains for traceability.  
+
+2. **Assessment**  
+   - Risks reviewed quarterly in RISK-CALENDAR.md.  
+   - Severity and impact documented for governance oversight.  
+
+3. **Mitigation**  
+   - Mitigation strategies logged in MITIGATION-REGISTER.md.  
+   - Lessons learned integrated into risk reduction.  
+
+4. **Transparency**  
+   - Risk evidence consolidated annually in governance binder.  
+   - Investor disclosures aligned with risk cadence.  
+
+Workflow Integration
+
+- Risks identified → logged in register.  
+- Reviews and updates → tracked in calendar.  
+- Linked evidence → change, audit, and lessons domains.  
+- Consolidated evidence → governance binder and board deck.  
+
+Usage
+
+- **Contributors** → Log risks and follow mitigation strategies.  
+- **Governance Leads** → Ensure risk evidence logged and escalated.  
+- **Board Members** → Review risk suite for confidence in governance maturity.  
+- **Investors** → Assess risk transparency and cadence.  
+
+Review Cadence
+
+- **Quarterly** → Risk calendar updated with reviews and evidence.  
+- **Annual** → Consolidated risk governance presented in board deck.  
+
+License
+
+© 2026 PayMate AI. All rights reserved.  
+Risk governance overview is for contributor, governance, board, and investor use only.

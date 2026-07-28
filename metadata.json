@@ -1,0 +1,5 @@
+{
+  "name": "PayMate AI",
+  "description": "Multilingual AI-powered SaaS payment platform with recurring billing and smart financial insights.",
+  "requestFramePermissions": ["microphone"]
+}

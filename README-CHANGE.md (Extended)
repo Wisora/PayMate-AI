@@ -1,0 +1,62 @@
+# Change Governance Overview – PayMate AI
+
+Purpose
+Provide contributors, governance leads, board members, and investors with a clear overview of change governance.  
+This README highlights registers, calendars, and evidence, integrating risk, roadmap, and lessons domains for holistic change assurance.
+
+Change Suite
+
+Core Files
+
+- **[CHANGE-REGISTER.md](CHANGE-REGISTER.md)** → Evidence log of change requests, approvals, and governance actions.  
+- **[CHANGE-CALENDAR.md](CHANGE-CALENDAR.md)** → Cadence of change reviews, updates, and disclosures.  
+
+Linked Governance
+
+- **[RISK-REGISTER.md](RISK-REGISTER.md)** → Risks linked to change management outcomes.  
+- **[ROADMAP-REGISTER.md](ROADMAP-REGISTER.md)** → Roadmap milestones adjusted through change governance.  
+- **[LESSONS-REGISTER.md](LESSONS-REGISTER.md)** → Lessons learned feeding change improvements.  
+- **[AUDIT-REGISTER.md](AUDIT-REGISTER.md)** → Audit findings integrated into change governance.  
+- **[GOVERNANCE-BINDER.md](GOVERNANCE-BINDER.md)** → Consolidated change evidence for board review.  
+
+Change Governance Principles
+
+1. **Control**  
+   - Change requests logged in CHANGE-REGISTER.md.  
+   - Linked to risk, roadmap, and lessons domains for traceability.  
+
+2. **Assessment**  
+   - Change impacts reviewed quarterly in CHANGE-CALENDAR.md.  
+   - Risks and roadmap adjustments documented for governance oversight.  
+
+3. **Adaptation**  
+   - Lessons learned incorporated into change approvals.  
+   - Audit findings integrated into change cycles.  
+
+4. **Transparency**  
+   - Change evidence consolidated annually in governance binder.  
+   - Investor disclosures aligned with change cadence.  
+
+Workflow Integration
+
+- Change requests → logged in register.  
+- Reviews and approvals → tracked in calendar.  
+- Linked evidence → risk, roadmap, and lessons domains.  
+- Consolidated evidence → governance binder and board deck.  
+
+Usage
+
+- **Contributors** → Submit change requests and follow governance approvals.  
+- **Governance Leads** → Ensure change evidence logged and escalated.  
+- **Board Members** → Review change suite for confidence in governance maturity.  
+- **Investors** → Assess change transparency and cadence.  
+
+Review Cadence
+
+- **Quarterly** → Change calendar updated with reviews and evidence.  
+- **Annual** → Consolidated change governance presented in board deck.  
+
+License
+
+© 2026 PayMate AI. All rights reserved.  
+Change governance overview is for contributor, governance, board, and investor use only.

@@ -1,0 +1,62 @@
+# Security Governance Overview – PayMate AI
+
+Purpose
+Provide contributors, governance leads, board members, and investors with a clear overview of security governance.  
+This README highlights registers, calendars, and evidence, integrating audit, compliance, and quality domains for holistic security assurance.
+
+Security Suite
+
+Core Files
+
+- **[SECURITY-REGISTER.md](SECURITY-REGISTER.md)** → Evidence log of security reviews, incidents, and governance actions.  
+- **[SECURITY-CALENDAR.md](SECURITY-CALENDAR.md)** → Cadence of security reviews, incident cycles, and disclosures.  
+
+Linked Governance
+
+- **[AUDIT-REGISTER.md](AUDIT-REGISTER.md)** → Audit findings integrated into security governance.  
+- **[COMPLIANCE-REGISTER.md](COMPLIANCE-REGISTER.md)** → Compliance evidence tied to security outcomes.  
+- **[QUALITY-REGISTER.md](QUALITY-REGISTER.md)** → Quality assurance linked to security practices.  
+- **[RISK-REGISTER.md](RISK-REGISTER.md)** → Risks linked to security incidents and mitigations.  
+- **[GOVERNANCE-BINDER.md](GOVERNANCE-BINDER.md)** → Consolidated security evidence for board review.  
+
+Security Governance Principles
+
+1. **Protection**  
+   - Security requirements defined in SECURITY-REGISTER.md.  
+   - Linked to audit, compliance, and quality domains for traceability.  
+
+2. **Evidence Logging**  
+   - Security incidents and remediation actions logged in register.  
+   - Integrated into governance binder for board confidence.  
+
+3. **Cadence**  
+   - Quarterly security reviews tracked in SECURITY-CALENDAR.md.  
+   - Annual consolidated security governance presented in board deck.  
+
+4. **Transparency**  
+   - Security evidence consolidated annually.  
+   - Investor disclosures aligned with security cadence.  
+
+Workflow Integration
+
+- Security standards → logged in register.  
+- Reviews and incidents → tracked in calendar.  
+- Linked evidence → audit, compliance, and quality domains.  
+- Consolidated evidence → governance binder and board deck.  
+
+Usage
+
+- **Contributors** → Follow security standards and report incidents.  
+- **Governance Leads** → Ensure security evidence logged and escalated.  
+- **Board Members** → Review security suite for confidence in governance maturity.  
+- **Investors** → Assess security transparency and cadence.  
+
+Review Cadence
+
+- **Quarterly** → Security calendar updated with reviews and evidence.  
+- **Annual** → Consolidated security governance presented in board deck.  
+
+License
+
+© 2026 PayMate AI. All rights reserved.  
+Security governance overview is for contributor, governance, board, and investor use only.

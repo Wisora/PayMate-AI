@@ -1,0 +1,62 @@
+# Accessibility Governance Overview – PayMate AI
+
+Purpose
+Provide contributors, governance leads, board members, and investors with a clear overview of accessibility governance.  
+This README highlights registers, calendars, and evidence, integrating quality, multilingual, and compliance domains for holistic accessibility assurance.
+
+Accessibility Suite
+
+Core Files
+
+- **[ACCESSIBILITY-REGISTER.md](ACCESSIBILITY-REGISTER.md)** → Evidence log of accessibility reviews, audits, and remediation actions.  
+- **[ACCESSIBILITY-CALENDAR.md](ACCESSIBILITY-CALENDAR.md)** → Cadence of accessibility reviews, audits, and disclosures.  
+
+Linked Governance
+
+- **[QUALITY-REGISTER.md](QUALITY-REGISTER.md)** → Accessibility evidence integrated into quality assurance.  
+- **[MULTILINGUAL-REGISTER.md](MULTILINGUAL-REGISTER.md)** → Localization evidence linked to accessibility outcomes.  
+- **[COMPLIANCE-REGISTER.md](COMPLIANCE-REGISTER.md)** → Compliance evidence tied to accessibility standards.  
+- **[LESSONS-REGISTER.md](LESSONS-REGISTER.md)** → Lessons learned feeding accessibility improvements.  
+- **[GOVERNANCE-BINDER.md](GOVERNANCE-BINDER.md)** → Consolidated accessibility evidence for board review.  
+
+Accessibility Governance Principles
+
+1. **Inclusivity**  
+   - Accessibility requirements defined in ACCESSIBILITY-REGISTER.md.  
+   - Linked to quality, multilingual, and compliance domains for traceability.  
+
+2. **Evidence Logging**  
+   - Accessibility audits and remediation actions logged in register.  
+   - Integrated into governance binder for board confidence.  
+
+3. **Cadence**  
+   - Quarterly accessibility reviews tracked in ACCESSIBILITY-CALENDAR.md.  
+   - Annual consolidated accessibility governance presented in board deck.  
+
+4. **Transparency**  
+   - Accessibility evidence consolidated annually.  
+   - Investor disclosures aligned with accessibility cadence.  
+
+Workflow Integration
+
+- Accessibility standards → logged in register.  
+- Reviews and audits → tracked in calendar.  
+- Linked evidence → quality, multilingual, and compliance domains.  
+- Consolidated evidence → governance binder and board deck.  
+
+Usage
+
+- **Contributors** → Follow accessibility standards and participate in reviews.  
+- **Governance Leads** → Ensure accessibility evidence logged and escalated.  
+- **Board Members** → Review accessibility suite for confidence in governance maturity.  
+- **Investors** → Assess accessibility transparency and cadence.  
+
+Review Cadence
+
+- **Quarterly** → Accessibility calendar updated with reviews and evidence.  
+- **Annual** → Consolidated accessibility governance presented in board deck.  
+
+License
+
+© 2026 PayMate AI. All rights reserved.  
+Accessibility governance overview is for contributor, governance, board, and investor use only.

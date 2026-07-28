@@ -1,0 +1,63 @@
+# Financial Governance Overview – PayMate AI
+
+Purpose
+Provide contributors, governance leads, board members, and investors with a clear overview of financial governance.  
+This README highlights registers, calendars, and evidence, integrating metrics, compliance, and audit domains for holistic financial assurance.
+
+Financial Suite
+
+Core Files
+
+- **[FINANCIAL-REGISTER.md](FINANCIAL-REGISTER.md)** → Evidence log of financial reviews, disclosures, and governance actions.  
+- **[FINANCIAL-CALENDAR.md](FINANCIAL-CALENDAR.md)** → Cadence of financial reviews, reporting cycles, and disclosures.  
+
+Linked Governance
+
+- **[METRICS-DASHBOARD.md](METRICS-DASHBOARD.md)** → KPIs and performance metrics tied to financial outcomes.  
+- **[COMPLIANCE-REGISTER.md](COMPLIANCE-REGISTER.md)** → Compliance evidence integrated into financial governance.  
+- **[AUDIT-REGISTER.md](AUDIT-REGISTER.md)** → Audit findings linked to financial disclosures.  
+- **[RISK-REGISTER.md](RISK-REGISTER.md)** → Risks tied to financial governance.  
+- **[INVESTOR-PACKET.md](INVESTOR-PACKET.md)** → Investor disclosures aligned with financial evidence.  
+- **[GOVERNANCE-BINDER.md](GOVERNANCE-BINDER.md)** → Consolidated financial evidence for board review.  
+
+Financial Governance Principles
+
+1. **Transparency**  
+   - Financial disclosures logged in FINANCIAL-REGISTER.md.  
+   - Linked to metrics, compliance, and audit domains for traceability.  
+
+2. **Evidence Logging**  
+   - Financial reviews and reporting cycles documented in register.  
+   - Integrated into governance binder for board confidence.  
+
+3. **Cadence**  
+   - Quarterly financial reviews tracked in FINANCIAL-CALENDAR.md.  
+   - Annual consolidated financial governance presented in board deck.  
+
+4. **Confidence**  
+   - Financial evidence consolidated annually.  
+   - Investor disclosures aligned with financial cadence.  
+
+Workflow Integration
+
+- Financial reviews → logged in register.  
+- Reporting cycles → tracked in calendar.  
+- Linked evidence → metrics, compliance, and audit domains.  
+- Consolidated evidence → governance binder and board deck.  
+
+Usage
+
+- **Contributors** → Align work with financial governance standards.  
+- **Governance Leads** → Ensure financial evidence logged and escalated.  
+- **Board Members** → Review financial suite for confidence in governance maturity.  
+- **Investors** → Assess financial transparency and cadence.  
+
+Review Cadence
+
+- **Quarterly** → Financial calendar updated with reviews and evidence.  
+- **Annual** → Consolidated financial governance presented in board deck.  
+
+License
+
+© 2026 PayMate AI. All rights reserved.  
+Financial governance overview is for contributor, governance, board, and investor use only.

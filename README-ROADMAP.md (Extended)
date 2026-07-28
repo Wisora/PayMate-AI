@@ -1,0 +1,62 @@
+# Roadmap Governance Overview – PayMate AI
+
+Purpose
+Provide contributors, governance leads, board members, and investors with a clear overview of roadmap governance.  
+This README highlights registers, calendars, and evidence, integrating change, lessons, and metrics domains for holistic execution assurance.
+
+Roadmap Suite
+
+Core Files
+
+- **[ROADMAP-REGISTER.md](ROADMAP-REGISTER.md)** → Evidence log of roadmap milestones, updates, and governance actions.  
+- **[ROADMAP-CALENDAR.md](ROADMAP-CALENDAR.md)** → Cadence of roadmap reviews, updates, and disclosures.  
+
+Linked Governance
+
+- **[CHANGE-REGISTER.md](CHANGE-REGISTER.md)** → Roadmap changes linked to governance approvals.  
+- **[LESSONS-REGISTER.md](LESSONS-REGISTER.md)** → Lessons learned feeding roadmap adjustments.  
+- **[METRICS-DASHBOARD.md](METRICS-DASHBOARD.md)** → KPIs tied to roadmap execution.  
+- **[RISK-REGISTER.md](RISK-REGISTER.md)** → Risks linked to roadmap milestones.  
+- **[GOVERNANCE-BINDER.md](GOVERNANCE-BINDER.md)** → Consolidated roadmap evidence for board review.  
+
+Roadmap Governance Principles
+
+1. **Planning**  
+   - Roadmap milestones logged in ROADMAP-REGISTER.md.  
+   - Linked to change, lessons, and metrics domains for traceability.  
+
+2. **Execution**  
+   - Roadmap progress tracked quarterly in ROADMAP-CALENDAR.md.  
+   - KPIs integrated into roadmap governance for performance assurance.  
+
+3. **Adaptation**  
+   - Lessons learned incorporated into roadmap updates.  
+   - Risks mitigated through linked governance registers.  
+
+4. **Transparency**  
+   - Roadmap evidence consolidated annually in governance binder.  
+   - Investor disclosures aligned with roadmap cadence.  
+
+Workflow Integration
+
+- Roadmap milestones → logged in register.  
+- Reviews and updates → tracked in calendar.  
+- Linked evidence → change, lessons, and metrics domains.  
+- Consolidated evidence → governance binder and board deck.  
+
+Usage
+
+- **Contributors** → Align work with roadmap milestones and governance cadence.  
+- **Governance Leads** → Ensure roadmap evidence logged and escalated.  
+- **Board Members** → Review roadmap suite for confidence in execution maturity.  
+- **Investors** → Assess roadmap transparency and cadence.  
+
+Review Cadence
+
+- **Quarterly** → Roadmap calendar updated with reviews and evidence.  
+- **Annual** → Consolidated roadmap governance presented in board deck.  
+
+License
+
+© 2026 PayMate AI. All rights reserved.  
+Roadmap governance overview is for contributor, governance, board, and investor use only.

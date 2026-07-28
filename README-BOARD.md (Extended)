@@ -1,0 +1,61 @@
+# Board Governance Overview – PayMate AI
+
+Purpose
+Provide board members, governance leads, and investors with a consolidated overview of board governance.  
+This README highlights registers, calendars, and evidence, integrating investor, audit, and calendar domains for holistic board assurance.
+
+Board Suite
+
+Core Files
+
+- **[BOARD-CALENDAR.md](BOARD-CALENDAR.md)** → Cadence of board meetings, reviews, and disclosures.  
+- **[BOARD-REGISTER.md](BOARD-REGISTER.md)** → Evidence log of board decisions, resolutions, and governance actions.  
+
+Linked Governance
+
+- **[INVESTOR-PACKET.md](INVESTOR-PACKET.md)** → Investor disclosures aligned with board governance.  
+- **[AUDIT-REGISTER.md](AUDIT-REGISTER.md)** → Audit findings integrated into board oversight.  
+- **[COMPLIANCE-REGISTER.md](COMPLIANCE-REGISTER.md)** → Compliance evidence tied to board governance.  
+- **[RISK-REGISTER.md](RISK-REGISTER.md)** → Risks escalated to board review.  
+- **[GOVERNANCE-BINDER.md](GOVERNANCE-BINDER.md)** → Consolidated board evidence for governance maturity.  
+
+Board Governance Principles
+
+1. **Oversight**  
+   - Board decisions logged in BOARD-REGISTER.md.  
+   - Linked to investor, audit, and compliance domains for traceability.  
+
+2. **Cadence**  
+   - Quarterly board meetings tracked in BOARD-CALENDAR.md.  
+   - Annual consolidated board governance presented in board deck.  
+
+3. **Transparency**  
+   - Board evidence consolidated annually in governance binder.  
+   - Investor disclosures aligned with board cadence.  
+
+4. **Confidence**  
+   - Board governance integrates audit, compliance, and risk domains.  
+   - Continuous improvement cycles documented for assurance.  
+
+Workflow Integration
+
+- Board meetings → tracked in calendar.  
+- Decisions and resolutions → logged in register.  
+- Linked evidence → investor, audit, and compliance domains.  
+- Consolidated evidence → governance binder and board deck.  
+
+Usage
+
+- **Board Members** → Review board suite for confidence in governance maturity.  
+- **Governance Leads** → Ensure board evidence logged and escalated.  
+- **Investors** → Assess board disclosures for transparency and cadence.  
+
+Review Cadence
+
+- **Quarterly** → Board calendar updated with meetings and evidence.  
+- **Annual** → Consolidated board governance presented in board deck.  
+
+License
+
+© 2026 PayMate AI. All rights reserved.  
+Board governance overview is for board, governance, and investor use only.
