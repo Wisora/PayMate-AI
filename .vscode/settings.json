@@ -1,0 +1,7 @@
+{
+  "files.associations": {
+    "*.css": "postcss"
+  },
+  "editor.defaultFormatter": "bradlc.vscode-tailwindcss",
+  "css.lint.unknownAtRules": "ignore"
+}

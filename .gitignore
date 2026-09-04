@@ -22,7 +22,8 @@ htmlcov/
 
 --- Editor & IDE ---
 
-.vscode/
+.vscode/*
+!.vscode/settings.json
 .idea/
 *.swp
 *.swo
@@ -58,7 +59,7 @@ Allow diagrams in /docs but ignore raw design files
 *.sketch
 *.xcf
 
- --- Misc ---
+--- Misc ---
 
 Ignore secrets or local env files
 
