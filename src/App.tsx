@@ -1,124 +1,10 @@
-// src/App.tsx
-import React from "react";
-import HeroSection from "./components/HeroSection";
-import FeaturesSection from "./components/FeaturesSection";
-import PricingTable from "./components/PricingTable";
-
-function App() {
-  return (
-    <div>
-      <HeroSection />
-      <FeaturesSection />
-      <PricingTable />
-    </div>
-  );
-}
-
-export default App;
-
-// src/App.tsx
-import React from "react";
-import HeroSection from "./components/HeroSection";
-import PricingTable from "./components/PricingTable";
-
-function App() {
-  return (
-    <div>
-      <HeroSection />
-      <PricingTable />
-    </div>
-  );
-}
-
-export default App;
-
-import NavBar from "./components/NavBar";
-import HeroSection from "./components/HeroSection";
-import FeaturesSection from "./components/FeaturesSection";
-import PricingTable from "./components/PricingTable";
-import Footer from "./components/Footer";
-
-function App() {
-  return (
-    <div>
-      <NavBar />
-      <HeroSection />
-      <FeaturesSection />
-      <PricingTable />
-      <Footer />
-    </div>
-  );
-}
-
-export default App;
-
-import HeroSection from "./components/HeroSection";
-import PricingTable from "./components/PricingTable";
-
-function App() {
-  return (
-    <div>
-      <HeroSection />
-      <PricingTable />
-    </div>
-  );
-}
-
-export default App;
-
-import HeroSection from "./components/HeroSection";
-import FeaturesSection from "./components/FeaturesSection";
-import PricingTable from "./components/PricingTable";
-
-function App() {
-  return (
-    <div>
-      <HeroSection />
-      <FeaturesSection />
-      <PricingTable />
-    </div>
-  );
-}
-
-export default App;
-
-import PricingTable from "./components/PricingTable";
-
-function App() {
-  return (
-    <div>
-      {/* Other sections like Hero, Features, etc. */}
-      <PricingTable />
-    </div>
-  );
-}
-
-export default App;
-
-import HeroSection from "./components/HeroSection";
-import FeaturesSection from "./components/FeaturesSection";
-import PricingTable from "./components/PricingTable";
-import Footer from "./components/Footer";
-
-function App() {
-  return (
-    <div>
-      <HeroSection />
-      <FeaturesSection />
-      <PricingTable />
-      <Footer />
-    </div>
-  );
-}
-
-export default App;
-
 /**
  * @license
  * SPDX-License-Identifier: Apache-2.0
  */
 
 import React, { useState } from "react";
+import { auth, db } from "./lib/firebase";
 import { useTranslation } from "react-i18next";
 import {
   LayoutDashboard,
@@ -131,6 +17,8 @@ import {
   Menu,
   X,
   BarChart,
+  Sun,
+  Moon,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Checkout } from "./components/Checkout";
@@ -143,7 +31,7 @@ import "./i18n";
 
 export default function App() {
   const { t } = useTranslation();
-  const { theme } = useTheme();
+  const { theme, toggleTheme } = useTheme();
   const [activeTab, setActiveTab] = useState("dashboard");
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
@@ -176,9 +64,7 @@ export default function App() {
   ];
 
   return (
-    <div
-      className={`relative min-h-screen ${theme === "dark" ? "dark" : ""} bg-slate-50 dark:bg-slate-950 flex text-slate-900 dark:text-slate-100 font-sans transition-colors duration-300 overflow-hidden`}
-    >
+    <div className="relative min-h-screen bg-slate-50 dark:bg-slate-950 flex text-slate-900 dark:text-slate-100 font-sans transition-colors duration-300 overflow-hidden">
       {/* Sidebar */}
       <AnimatePresence mode="wait">
         {isSidebarOpen && (
@@ -256,11 +142,24 @@ export default function App() {
           </div>
 
           <div className="flex items-center gap-4">
+            {/* Dark Mode Toggle Header Button */}
+            <button
+              onClick={toggleTheme}
+              className="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors text-slate-500 dark:text-slate-400"
+              title="Toggle Theme"
+            >
+              {theme === "dark" ? (
+                <Sun className="w-5 h-5 text-amber-400" />
+              ) : (
+                <Moon className="w-5 h-5 text-slate-600" />
+              )}
+            </button>
+
             <button className="relative p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors">
               <Bell className="w-5 h-5 text-slate-500 dark:text-slate-400" />
               <span className="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full border-2 border-white dark:border-slate-900"></span>
             </button>
-            <div className="h-8 w-[1px] bg-slate-200 dark:bg-slate-800 mx-2"></div>
+            <div className="h-8 w-px bg-slate-200 dark:bg-slate-800 mx-2"></div>
             <div className="flex items-center gap-3">
               <div className="text-right hidden sm:block">
                 <p className="text-sm font-bold text-slate-900 dark:text-white">

@@ -1,4 +1,4 @@
-import express from "express";
+import express, { Request, Response } from "express";
 import { createServer as createViteServer } from "vite";
 import path from "path";
 import { fileURLToPath } from "url";
@@ -16,12 +16,12 @@ async function startServer() {
   app.use(express.json());
 
   // API Routes
-  app.get("/api/health", (req, res) => {
+  app.get("/api/health", (_req: Request, res: Response) => {
     res.json({ status: "ok", timestamp: new Date().toISOString() });
   });
 
   // Extended login route
-  app.post("/api/auth/login", (req, res) => {
+  app.post("/api/auth/login", (req: Request, res: Response) => {
     const { username, password } = req.body;
 
     // Demo logic for testing
@@ -45,7 +45,7 @@ async function startServer() {
   });
 
   // Dashboard route
-  app.get("/api/dashboard", (req, res) => {
+  app.get("/api/dashboard", (_req: Request, res: Response) => {
     res.json({
       message: "Dashboard data",
       items: ["overview", "stats", "charts"],
@@ -53,30 +53,29 @@ async function startServer() {
   });
 
   // Subscriptions route
-  app.get("/api/subscriptions", (req, res) => {
+  app.get("/api/subscriptions", (_req: Request, res: Response) => {
     res.json({ subscriptions: ["Netflix", "Spotify", "PayMate Premium"] });
   });
 
   // Fraud alerts route
-  app.get("/api/fraud-alerts", (req, res) => {
+  app.get("/api/fraud-alerts", (_req: Request, res: Response) => {
     res.json({
       alerts: ["Suspicious login attempt", "Unusual transaction detected"],
     });
   });
 
   // Placeholder for Payment API
-  app.post("/api/payments/checkout", (req, res) => {
+  app.post("/api/payments/checkout", (req: Request, res: Response) => {
     const { amount, currency, provider } = req.body;
     console.log(`Processing ${amount} ${currency} via ${provider}`);
     res.json({
       success: true,
-      transactionId: "txn_" + Math.random().toString(36).substr(2, 9),
+      transactionId: "txn_" + Math.random().toString(36).substring(2, 11),
     });
   });
 
   // Placeholder for AI Assistant Logic
-  app.post("/api/ai/chat", async (req, res) => {
-    const { message } = req.body;
+  app.post("/api/ai/chat", (_req: Request, res: Response) => {
     // This will be handled by Gemini in the frontend, but we can have server-side logic too
     res.json({
       reply:
@@ -85,7 +84,7 @@ async function startServer() {
   });
 
   // Analytics API (Phase 1)
-  app.get("/api/analytics/summary", (req, res) => {
+  app.get("/api/analytics/summary", (_req: Request, res: Response) => {
     res.json({
       revenue: 12450,
       users: 1240,
@@ -103,7 +102,7 @@ async function startServer() {
     app.use(vite.middlewares);
   } else {
     app.use(express.static(path.join(__dirname, "dist")));
-    app.get("*", (req, res) => {
+    app.get("(.*)", (_req: Request, res: Response) => {
       res.sendFile(path.join(__dirname, "dist", "index.html"));
     });
   }
