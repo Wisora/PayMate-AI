@@ -1,5 +1,4 @@
---- Core Python / Node ---
-
+# Core Python / Node
 venv/
 env/
 __pycache__/
@@ -10,8 +9,7 @@ dist/
 build/
 *.egg-info/
 
---- Logs & Databases ---
-
+# Logs & Databases
 *.log
 *.sqlite3
 coverage.xml
@@ -20,49 +18,37 @@ nosetests.xml
 htmlcov/
 .cache/
 
---- Editor & IDE ---
-
+# Editor & IDE
 .vscode/*
 !.vscode/settings.json
 .idea/
 *.swp
 *.swo
 
---- OS Files ---
-
+# OS Files
 .DS_Store
 Thumbs.db
 
---- Documentation Build Artifacts ---
-
-Ignore temporary outputs from doc generators
-
+# Documentation Build Artifacts
 /docs/**/*.tmp
 /docs/**/*.bak
 /docs/**/*.swp
 /docs/**/*.log
 
---- Governance Binder ---
-
-Keep only Markdown files in binder, ignore temp exports
-
+# Governance Binder
 /docs/investor-presentations/**/*.pdf
 /docs/investor-presentations/**/*.pptx
 /docs/investor-presentations/**/*.docx
 
---- Repo Visuals ---
-
-Allow diagrams in /docs but ignore raw design files
-
+# Repo Visuals
 *.psd
 *.ai
 *.sketch
 *.xcf
 
---- Misc ---
-
-Ignore secrets or local env files
-
+# SECRETS & ENVIRONMENT FILES (Strict Protection)
 .env
-.env.local
-.env.*.backup
+.env.*
+!.env.example
+*.pem
+*.key
