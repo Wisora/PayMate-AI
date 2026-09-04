@@ -62,6 +62,7 @@
     "uuid": "^11.1.1"
   },
   "optionalDependencies": {
-    "@rollup/rollup-linux-x64-gnu": "^4.32.0"
+    "@rollup/rollup-linux-x64-gnu": "^4.32.0",
+    "lightningcss-linux-x64-gnu": "^1.29.0"
   }
 }
