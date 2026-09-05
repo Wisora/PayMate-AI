@@ -54,6 +54,7 @@
     "jest": "^30.5.1",
     "jest-axe": "^10.0.0",
     "jest-environment-jsdom": "^30.5.1",
+    "markdownlint-cli": "^0.49.1",
     "tailwindcss": "^4.1.14",
     "ts-jest": "^29.4.9",
     "tsx": "^4.21.0",
@@ -72,8 +73,20 @@
   },
   "babel": {
     "presets": [
-      ["@babel/preset-env", { "targets": { "node": "current" } }],
-      ["@babel/preset-react", { "runtime": "automatic" }],
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ],
+      [
+        "@babel/preset-react",
+        {
+          "runtime": "automatic"
+        }
+      ],
       "@babel/preset-typescript"
     ]
   },
