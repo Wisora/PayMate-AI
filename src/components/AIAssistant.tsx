@@ -188,7 +188,11 @@ export const AIAssistant: React.FC = () => {
             >
               <div className="flex items-center gap-3 pointer-events-none">
                 {view === 'settings' && (
-                  <button onClick={() => setView('chat')} className="p-1 hover:bg-white/10 rounded-lg">
+                  <button 
+                    onClick={() => setView('chat')} 
+                    className="p-1 hover:bg-white/10 rounded-lg"
+                    aria-label={t('back_to_chat', { defaultValue: 'Back to chat' })}
+                  >
                     <ChevronLeft className="w-5 h-5" />
                   </button>
                 )}
@@ -202,11 +206,21 @@ export const AIAssistant: React.FC = () => {
               </div>
               <div className="flex items-center gap-2 pointer-events-auto">
                 {view === 'chat' && (
-                  <button onClick={() => setView('settings')} className="hover:bg-white/10 p-1 rounded-lg transition-colors" title={t('settings')}>
+                  <button 
+                    onClick={() => setView('settings')} 
+                    className="hover:bg-white/10 p-1 rounded-lg transition-colors" 
+                    title={t('settings')}
+                    aria-label={t('settings', { defaultValue: 'Settings' })}
+                  >
                     <SettingsIcon className="w-5 h-5" />
                   </button>
                 )}
-                <button onClick={() => setIsOpen(false)} className="hover:bg-white/10 p-1 rounded-lg transition-colors" title={t('close')}>
+                <button 
+                  onClick={() => setIsOpen(false)} 
+                  className="hover:bg-white/10 p-1 rounded-lg transition-colors" 
+                  title={t('close')}
+                  aria-label={t('close', { defaultValue: 'Close' })}
+                >
                   <X className="w-5 h-5" />
                 </button>
               </div>
@@ -235,6 +249,7 @@ export const AIAssistant: React.FC = () => {
                     <button 
                       onClick={toggleListening}
                       className={`p-2 rounded-lg transition-colors ${isListening ? 'bg-red-100 text-red-600' : 'hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-500'}`}
+                      aria-label={t('voice_input', { defaultValue: 'Voice input' })}
                     >
                       <Mic className="w-5 h-5" />
                     </button>
@@ -249,6 +264,7 @@ export const AIAssistant: React.FC = () => {
                     <button 
                       onClick={handleSend}
                       className="p-2 bg-slate-900 dark:bg-emerald-600 text-white rounded-lg hover:bg-slate-800 dark:hover:bg-emerald-500 transition-colors"
+                      aria-label={t('send_message', { defaultValue: 'Send message' })}
                     >
                       <Send className="w-4 h-4" />
                     </button>

@@ -34,8 +34,10 @@
     "tailwind-merge": "^3.5.0"
   },
   "devDependencies": {
-    "@babel/preset-env": "^7.29.2",
-    "@babel/preset-typescript": "^7.28.5",
+    "@babel/core": "^7.29.7",
+    "@babel/preset-env": "^7.29.7",
+    "@babel/preset-react": "^7.29.7",
+    "@babel/preset-typescript": "^7.29.7",
     "@tailwindcss/vite": "^4.1.14",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
@@ -47,9 +49,10 @@
     "@types/react-dom": "^19.2.7",
     "@vitejs/plugin-react": "^5.0.4",
     "autoprefixer": "^10.4.21",
-    "babel-jest": "^30.3.0",
-    "jest": "^30.3.0",
+    "babel-jest": "^30.5.1",
+    "jest": "^30.5.1",
     "jest-axe": "^10.0.0",
+    "jest-environment-jsdom": "^30.5.1",
     "tailwindcss": "^4.1.14",
     "ts-jest": "^29.4.9",
     "tsx": "^4.21.0",
@@ -65,5 +68,25 @@
     "@rollup/rollup-linux-x64-gnu": "^4.32.0",
     "@tailwindcss/oxide-linux-x64-gnu": "^4.1.14",
     "lightningcss-linux-x64-gnu": "^1.29.0"
+  },
+  "babel": {
+    "presets": [
+      ["@babel/preset-env", { "targets": { "node": "current" } }],
+      ["@babel/preset-react", { "runtime": "automatic" }],
+      "@babel/preset-typescript"
+    ]
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "transform": {
+      "^.+\\.(ts|tsx|js|jsx)$": "babel-jest"
+    },
+    "transformIgnorePatterns": [
+      "/node_modules/(?!(@google/genai|firebase|@firebase|lucide-react|i18next|react-router-dom)/)"
+    ],
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/src/$1",
+      "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+    }
   }
 }

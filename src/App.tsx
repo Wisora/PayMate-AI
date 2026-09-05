@@ -86,6 +86,7 @@ export default function App() {
               <button
                 onClick={() => setIsSidebarOpen(false)}
                 className="lg:hidden p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg"
+                aria-label={t("close_sidebar", { defaultValue: "Close sidebar" })}
               >
                 <X className="w-5 h-5" />
               </button>
@@ -127,6 +128,7 @@ export default function App() {
               <button
                 onClick={() => setIsSidebarOpen(true)}
                 className="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg"
+                aria-label={t("open_sidebar", { defaultValue: "Open sidebar" })}
               >
                 <Menu className="w-5 h-5 dark:text-white" />
               </button>
@@ -147,6 +149,7 @@ export default function App() {
               onClick={toggleTheme}
               className="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors text-slate-500 dark:text-slate-400"
               title="Toggle Theme"
+              aria-label="Toggle Theme"
             >
               {theme === "dark" ? (
                 <Sun className="w-5 h-5 text-amber-400" />
@@ -155,7 +158,10 @@ export default function App() {
               )}
             </button>
 
-            <button className="relative p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors">
+            <button 
+              className="relative p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors"
+              aria-label={t("notifications", { defaultValue: "Notifications" })}
+            >
               <Bell className="w-5 h-5 text-slate-500 dark:text-slate-400" />
               <span className="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full border-2 border-white dark:border-slate-900"></span>
             </button>

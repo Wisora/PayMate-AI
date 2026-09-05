@@ -18,6 +18,8 @@
     },
     "allowImportingTsExtensions": true,
     "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "strict": true,
     "noEmit": true
   },
