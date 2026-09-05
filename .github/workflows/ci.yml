@@ -46,7 +46,14 @@ jobs:
         run: |
           npx serve -s dist -l 3000 &
           npx wait-on http://localhost:3000
-          npx pa11y http://localhost:3000 --chrome-launch-config.args="--no-sandbox" --chrome-launch-config.args="--disable-setuid-sandbox"
+          npx pa11y http://localhost:3000
+
+      # --- k6 Performance Tests ---
+      - name: Setup k6
+        uses: grafana/setup-k6-action@v1
+
+      - name: Run k6 performance suite
+        run: k6 run tests/performance/basic.test.js
 
       # --- Commit Message Check ---
       - name: Validate commit messages
