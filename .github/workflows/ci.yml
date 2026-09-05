@@ -43,6 +43,8 @@ jobs:
         run: npm run build
 
       - name: Run Pa11y Accessibility Check
+        env:
+          PA11Y_CHROME_LAUNCH_CONFIG: '{"args":["--no-sandbox","--disable-setuid-sandbox","--disable-dev-shm-usage"]}'
         run: |
           npx serve -s dist -l 3000 &
           npx wait-on http://localhost:3000
