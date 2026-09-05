@@ -38,9 +38,15 @@ jobs:
       - name: Lint Markdown docs
         run: npx markdownlint-cli "docs/**/*.md" --config .markdownlint.json
 
-      # --- Accessibility Check (Docs) ---
-      - name: Accessibility check
-        run: npx pa11y docs/investor-presentations/README.md
+      # --- Build & Live UI Accessibility Check ---
+      - name: Build application
+        run: npm run build
+
+      - name: Run Pa11y Accessibility Check
+        run: |
+          npx serve -s dist -l 3000 &
+          npx wait-on http://localhost:3000
+          npx pa11y http://localhost:3000 --chrome-launch-config.args="--no-sandbox" --chrome-launch-config.args="--disable-setuid-sandbox"
 
       # --- Commit Message Check ---
       - name: Validate commit messages
