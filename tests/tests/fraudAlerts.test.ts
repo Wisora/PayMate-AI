@@ -1,4 +1,4 @@
-import { detectFraud } from "../src/api/fraudAlerts";
+import { detectFraud } from "@/api/fraudAlerts";
 
 test("flags high-value transactions", () => {
   const txs = [

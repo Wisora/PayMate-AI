@@ -1,5 +1,3 @@
-// src/api/fraudAlerts.ts
-
 export interface Transaction {
   id: string;
   amount: number;
