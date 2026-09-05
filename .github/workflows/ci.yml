@@ -46,7 +46,7 @@ jobs:
         run: |
           npx serve -s dist -l 3000 &
           npx wait-on http://localhost:3000
-          npx pa11y http://localhost:3000 --config .pa11yrc.js
+          npx pa11y http://localhost:3000 --config .pa11yrc.cjs
 
       # --- k6 Performance Tests ---
       - name: Setup k6
