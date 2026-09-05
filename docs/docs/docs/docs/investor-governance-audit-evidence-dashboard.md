@@ -12,13 +12,13 @@ Dashboard Components
 - **Chart:** Audit completion trend (Q1 2025 → Q1 2026)
 - **Link:** System logs and audit reports
 
-1.  Accessibility Evidence
+1. Accessibility Evidence
 
 - **Tile:** WCAG Compliance (90%)
 - **Chart:** Alt‑text coverage growth (60% → 95%)
 - **Link:** Contributor checklists and audit reports
 
-1.  Security Evidence
+1. Security Evidence
 
 - **Tile:** Patch SLA Compliance (+25% YoY)
 - **Chart:** Vulnerability scan coverage trend (70% → 90%)
