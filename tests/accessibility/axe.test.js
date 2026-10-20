@@ -3,7 +3,7 @@
  */
 
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, waitFor } from '@testing-library/react';
 import { axe, toHaveNoViolations } from 'jest-axe';
 import App from '../../src/App';
 import { ThemeProvider } from '../../src/contexts/ThemeContext';
@@ -63,11 +63,26 @@ expect.extend(toHaveNoViolations);
 
 describe('Accessibility Audit', () => {
   it('should have no accessibility violations in the main App', async () => {
-    const { container } = render(
-      <ThemeProvider>
-        <App />
-      </ThemeProvider>
-    );
+    let container;
+
+    // Wait for the component to mount and finish its initial async data loading
+    await waitFor(async () => {
+      const utils = render(
+        <ThemeProvider>
+          <App />
+        </ThemeProvider>
+      );
+      container = utils.container;
+    });
+
+    // Ensure async state updates have settled and headings contain text
+    await waitFor(() => {
+      const headings = container.querySelectorAll('h2');
+      headings.forEach((h) => {
+        expect(h.textContent.trim()).not.toBe('');
+      });
+    });
+
     const results = await axe(container);
     expect(results).toHaveNoViolations();
   });

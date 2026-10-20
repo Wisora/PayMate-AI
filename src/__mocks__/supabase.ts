@@ -1,10 +1,10 @@
 export const supabase = {
   from: () => ({
     select: () => ({
-      order: () => ({ data: [], error: null }),
-      single: () => ({ data: null, error: null }),
+      order: () => Promise.resolve({ data: [], error: null }),
+      single: () => Promise.resolve({ data: null, error: null }),
     }),
-    insert: () => ({ error: null }),
+    insert: () => Promise.resolve({ error: null }),
   }),
 };
 
