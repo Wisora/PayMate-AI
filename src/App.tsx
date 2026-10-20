@@ -3,8 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState } from "react";
-import { auth, db } from "./lib/firebase";
+import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import {
   LayoutDashboard,
@@ -19,6 +18,7 @@ import {
   BarChart,
   Sun,
   Moon,
+  Loader2,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Checkout } from "./components/Checkout";
@@ -27,13 +27,65 @@ import { Settings } from "./components/Settings";
 import { AIAssistant } from "./components/AIAssistant";
 import { AnalyticsDashboard } from "./components/AnalyticsDashboard";
 import { useTheme } from "./contexts/ThemeContext";
+import { getDashboardData, applyAiSuggestionAction } from "./lib/supabase";
 import "./i18n";
+
+interface MetricState {
+  total_balance: number;
+  monthly_revenue: number;
+  total_users: number;
+  active_now: number;
+}
+
+interface TransactionItem {
+  id: string;
+  title: string;
+  amount: number;
+  category: string;
+  created_at: string;
+}
 
 export default function App() {
   const { t } = useTranslation();
   const { theme, toggleTheme } = useTheme();
   const [activeTab, setActiveTab] = useState("dashboard");
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+
+  // Supabase Live Data States
+  const [loading, setLoading] = useState(true);
+  const [metrics, setMetrics] = useState<MetricState | null>(null);
+  const [transactions, setTransactions] = useState<TransactionItem[]>([]);
+  const [schedulesCount, setSchedulesCount] = useState<number>(0);
+  const [aiApplying, setAiApplying] = useState(false);
+  const [aiApplied, setAiApplied] = useState(false);
+
+  // Fetch live Supabase data on mount
+  useEffect(() => {
+    async function loadData() {
+      try {
+        setLoading(true);
+        const data = await getDashboardData();
+        if (data.metrics) setMetrics(data.metrics);
+        if (data.transactions) setTransactions(data.transactions);
+        if (data.schedules) setSchedulesCount(data.schedules.length);
+      } catch (err) {
+        console.error("Error loading dashboard data:", err);
+      } finally {
+        setLoading(false);
+      }
+    }
+    loadData();
+  }, []);
+
+  const handleApplyAiSuggestion = async () => {
+    setAiApplying(true);
+    const result = await applyAiSuggestionAction("Apartment Rent", 1200.0, "2026-11-05");
+    setAiApplying(false);
+    if (result.success) {
+      setAiApplied(true);
+      setSchedulesCount((prev) => prev + 1);
+    }
+  };
 
   const navItems = [
     {
@@ -148,7 +200,6 @@ export default function App() {
           </div>
 
           <div className="flex items-center gap-4">
-            {/* Dark Mode Toggle Header Button */}
             <button
               onClick={toggleTheme}
               className="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors text-slate-500 dark:text-slate-400"
@@ -203,28 +254,37 @@ export default function App() {
               {activeTab === "dashboard" && (
                 <div className="space-y-8">
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    {/* Total Balance Card */}
                     <div className="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800">
                       <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">
                         {t("total_balance")}
                       </p>
                       <h2 className="text-3xl font-black text-slate-900 dark:text-white">
-                        {t("total_balance_value")}
+                        {loading ? (
+                          <Loader2 className="w-6 h-6 animate-spin text-emerald-500" />
+                        ) : (
+                          `$${(metrics?.total_balance ?? 12450).toLocaleString("en-US", { minimumFractionDigits: 2 })}`
+                        )}
                       </h2>
                       <p className="text-xs text-emerald-600 font-bold mt-2">
                         +12.5% {t("from_last_month")}
                       </p>
                     </div>
+
+                    {/* Upcoming Payments Card */}
                     <div className="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800">
                       <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">
                         {t("upcoming_payments")}
                       </p>
                       <h2 className="text-3xl font-black text-slate-900 dark:text-white">
-                        4
+                        {loading ? <Loader2 className="w-6 h-6 animate-spin text-emerald-500" /> : schedulesCount}
                       </h2>
                       <p className="text-xs text-slate-400 font-bold mt-2">
                         {t("next_payment_info")}
                       </p>
                     </div>
+
+                    {/* Savings Goal Card */}
                     <div className="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800">
                       <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">
                         {t("savings_goal")}
@@ -239,36 +299,47 @@ export default function App() {
                   </div>
 
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    {/* Recent Activity List */}
                     <div className="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800">
                       <h3 className="text-lg font-bold mb-6 dark:text-white">
                         {t("recent_activity")}
                       </h3>
                       <div className="space-y-4">
-                        {[1, 2, 3, 4].map((i) => (
-                          <div
-                            key={i}
-                            className="flex items-center justify-between py-3 border-b border-slate-50 dark:border-slate-800 last:border-0"
-                          >
-                            <div className="flex items-center gap-4">
-                              <div className="w-10 h-10 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center">
-                                <CreditCard className="w-5 h-5 text-slate-400" />
-                              </div>
-                              <div>
-                                <p className="text-sm font-bold dark:text-slate-200">
-                                  {t("netflix_sub")}
-                                </p>
-                                <p className="text-[10px] text-slate-400">
-                                  {t("recent_activity_date")}
-                                </p>
-                              </div>
-                            </div>
-                            <p className="text-sm font-black text-slate-900 dark:text-white">
-                              {t("recent_activity_amount")}
-                            </p>
+                        {loading ? (
+                          <div className="flex items-center justify-center py-6">
+                            <Loader2 className="w-6 h-6 animate-spin text-emerald-500" />
                           </div>
-                        ))}
+                        ) : transactions.length > 0 ? (
+                          transactions.map((tx) => (
+                            <div
+                              key={tx.id}
+                              className="flex items-center justify-between py-3 border-b border-slate-50 dark:border-slate-800 last:border-0"
+                            >
+                              <div className="flex items-center gap-4">
+                                <div className="w-10 h-10 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center">
+                                  <CreditCard className="w-5 h-5 text-slate-400" />
+                                </div>
+                                <div>
+                                  <p className="text-sm font-bold dark:text-slate-200">
+                                    {tx.title}
+                                  </p>
+                                  <p className="text-[10px] text-slate-400">
+                                    {new Date(tx.created_at).toLocaleDateString()}
+                                  </p>
+                                </div>
+                              </div>
+                              <p className="text-sm font-black text-slate-900 dark:text-white">
+                                -${tx.amount.toFixed(2)}
+                              </p>
+                            </div>
+                          ))
+                        ) : (
+                          <p className="text-sm text-slate-400 text-center py-4">No recent transactions recorded</p>
+                        )}
                       </div>
                     </div>
+
+                    {/* AI Insights Banner */}
                     <div className="bg-slate-900 dark:bg-black p-6 rounded-2xl shadow-xl text-white overflow-hidden relative">
                       <div className="relative z-10">
                         <h3 className="text-lg font-bold mb-2">
@@ -277,8 +348,13 @@ export default function App() {
                         <p className="text-sm text-slate-400 mb-6">
                           {t("ai_insight_text")}
                         </p>
-                        <button className="px-6 py-3 bg-emerald-500 text-white rounded-xl font-bold hover:bg-emerald-400 transition-colors">
-                          {t("apply_suggestion")}
+                        <button
+                          onClick={handleApplyAiSuggestion}
+                          disabled={aiApplying || aiApplied}
+                          className="px-6 py-3 bg-emerald-500 text-slate-950 font-bold rounded-xl hover:bg-emerald-400 transition-colors disabled:opacity-60 flex items-center gap-2"
+                        >
+                          {aiApplying && <Loader2 className="w-4 h-4 animate-spin" />}
+                          {aiApplied ? "✓ Scheduled on Calendar" : t("apply_suggestion")}
                         </button>
                       </div>
                       <div className="absolute -right-10 -bottom-10 w-40 h-40 bg-emerald-500/20 blur-3xl rounded-full"></div>

@@ -16,6 +16,8 @@
   },
   "dependencies": {
     "@google/genai": "^1.29.0",
+    "@supabase/ssr": "^0.12.7",
+    "@supabase/supabase-js": "^2.118.0",
     "better-sqlite3": "^12.4.1",
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",
