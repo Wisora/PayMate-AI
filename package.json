@@ -108,6 +108,7 @@
     ],
     "moduleNameMapper": {
       "^@/(.*)$": "<rootDir>/src/$1",
+      "^.*lib/supabase$": "<rootDir>/src/__mocks__/supabase.ts",
       "\\.(css|less|scss|sass)$": "identity-obj-proxy"
     }
   }
