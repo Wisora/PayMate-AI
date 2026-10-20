@@ -104,7 +104,7 @@
       "<rootDir>/tests/performance/"
     ],
     "transformIgnorePatterns": [
-      "/node_modules/(?!(@google/genai|firebase|@firebase|lucide-react|i18next|react-router-dom)/)"
+      "/node_modules/(?!(@google/genai|firebase|@firebase|lucide-react|i18next|react-router-dom|@supabase)/)"
     ],
     "moduleNameMapper": {
       "^@/(.*)$": "<rootDir>/src/$1",
